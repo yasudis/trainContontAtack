@@ -15,4 +15,13 @@ public class PlayerUnit : MonoBehaviour
     {
         
     }
+    public void DamadgEPlayer(float damadge)
+    {
+        healf -= damadge;
+        if (healf < 0)
+        {
+            Destroy(gameObject);
+            
+        }
+    }
 }

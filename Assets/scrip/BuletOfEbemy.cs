@@ -29,9 +29,9 @@ public class BuletOFEbemy : MonoBehaviour
         GameObject whois = other.gameObject;
         enemyFollow=whois.GetComponent<EnemyFollow>();
         
-        if (whois.tag == "Enemy")
+        if (whois.tag == "Player")
         {
-            Debug.Log("Zadel Enemy");
+            Debug.Log("Zadel Player");
             Destroy(gameObject);
            enemyFollow.DamadgeEnemy(damadge);
            // Destroy(whois);
