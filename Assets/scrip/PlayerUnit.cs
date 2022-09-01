@@ -15,7 +15,7 @@ public class PlayerUnit : MonoBehaviour
     {
         
     }
-    public void DamadgEPlayer(float damadge)
+    public void DamadgePlayer(float damadge)
     {
         healf -= damadge;
         if (healf < 0)

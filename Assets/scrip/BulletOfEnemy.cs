@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuletOFEbemy : MonoBehaviour
+public class BulletOfEnemy : MonoBehaviour
 {
-    public float damadge;
-    EnemyFollow enemyFollow;
-   // private float time;
+    private float damadge=2f;
+    PlayerUnit damadgePlayer;
+    // private float time;
     // Start is called before the first frame update
     void Start()
     {
         damadge = EnemyManadger.damadgeSolder;
-       // time = 0;
+        // time = 0;
 
 
     }
@@ -21,20 +21,20 @@ public class BuletOFEbemy : MonoBehaviour
     {
         transform.position += transform.forward * 10f * Time.deltaTime;
         //time += time + Time.time;
-       Destroy(gameObject,2f);
-        
+        Destroy(gameObject, 2f);
+
     }
     private void OnTriggerEnter(Collider other)
     {
         GameObject whois = other.gameObject;
-        enemyFollow=whois.GetComponent<EnemyFollow>();
-        
+        damadgePlayer = whois.GetComponent<PlayerUnit>();
+
         if (whois.tag == "Player")
         {
             Debug.Log("Zadel Player");
             Destroy(gameObject);
-           enemyFollow.DamadgeEnemy(damadge);
-           // Destroy(whois);
+            damadgePlayer.DamadgePlayer(damadge);
+            // Destroy(whois);
         }
         else
         {
