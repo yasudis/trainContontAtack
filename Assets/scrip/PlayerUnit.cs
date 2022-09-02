@@ -7,7 +7,8 @@ public class PlayerUnit : MonoBehaviour
     public float healf;
     void Start()
     {
-        healf = PlayerManager.healf;
+       healf = PlayerManager.healf;
+
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class PlayerUnit : MonoBehaviour
         healf -= damadge;
         if (healf < 0)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
             
         }
     }

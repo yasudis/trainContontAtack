@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerManager : MonoBehaviour
 {
     
-    public static float healf;
+    public static float healf=1000;
     public static float speedOfAngle=2f;
     public static int menyTorel;
     public static float damedgePlaer;
@@ -18,7 +18,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healf = 10f;
+       
         damedgePlaer = 5f;
         speedOfAngle = 2f;
 

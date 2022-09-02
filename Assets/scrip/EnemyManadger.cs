@@ -9,12 +9,6 @@ public class EnemyManadger : MonoBehaviour
     public static float damadgeSolder=10f;
     public static int solderOfCoins=5;
     public static float reloadOfSolder = 1f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     
 }
