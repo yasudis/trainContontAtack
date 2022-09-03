@@ -21,20 +21,22 @@ public class BulletOfEnemy : MonoBehaviour
     {
         transform.position += transform.forward * 10f * Time.deltaTime;
         //time += time + Time.time;
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 100f);
 
     }
     private void OnTriggerEnter(Collider other)
     {
         GameObject whois = other.gameObject;
-        damadgePlayer = whois.GetComponent<PlayerUnit>();
+        
 
         if (whois.tag == "Player")
         {
+            damadgePlayer = whois.GetComponent<PlayerUnit>();
             Debug.Log("Zadel Player");
             Destroy(gameObject);
             damadgePlayer.DamadgePlayer(damadge);
-            // Destroy(whois);
+            
+
         }
         else
         {
