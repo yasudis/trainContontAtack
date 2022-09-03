@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerUnit : MonoBehaviour
 {
     public float healf;
+    
     void Start()
     {
        healf = PlayerManager.healf;
+
 
     }
 
@@ -16,8 +18,11 @@ public class PlayerUnit : MonoBehaviour
         healf -= damadge;
         if (healf < 0)
         {
+            MenuManager.GameOver();
             Destroy(this.gameObject);
+            Debug.Log("Game Over");
             
+
         }
     }
 }

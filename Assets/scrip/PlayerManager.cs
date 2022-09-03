@@ -6,7 +6,7 @@ using TMPro;
 public class PlayerManager : MonoBehaviour
 {
     
-    public static float healf=1000;
+    public static float healf=300;
     public static float speedOfAngle=2f;
     public static int menyTorel;
     public static float damedgePlaer;

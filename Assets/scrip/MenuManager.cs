@@ -22,5 +22,10 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Exit");
     }
-   
+    public  static void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
+
+
 }
