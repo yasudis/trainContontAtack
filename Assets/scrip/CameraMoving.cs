@@ -4,16 +4,31 @@ using UnityEngine;
 
 public class CameraMoving : MonoBehaviour
 {
-
+    GameObject player;
+    float moveSpeed = 10f;
+    Vector3 cameraPositionOfPlayer;
+    Vector3 cameraRotationOfOlayer;
+    Quaternion startRotation;
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        startRotation=transform.localRotation;
+    }
     private void Update()
     {
+        cameraPositionOfPlayer = new Vector3(player.transform.position.x, player.transform.position.y + 24, player.transform.position.z - 20);
+
         if (Input.GetMouseButtonDown(0))
         {
-            ShakeCamera(0.5f,1f,20f);
+            ShakeCamera(0.5f, 1f, 20f);
         }
+        transform.position = Vector3.MoveTowards(transform.position, cameraPositionOfPlayer, moveSpeed * Time.deltaTime);
+        transform.rotation = startRotation;
+
     }
-    //С помощью данной функции будет запущена вибрация извне данного класса
-    public void ShakeCamera(float duration, float magnitude, float noize)
+
+
+    public void ShakeCamera(float duration, float magnitude, float noize)//С помощью данной функции будет запущена вибрация извне данного класса
     {
         //Запускаем корутину вибрации
         StartCoroutine(ShakeCameraCor(duration, magnitude, noize));
@@ -51,6 +66,6 @@ public class CameraMoving : MonoBehaviour
             yield return null;
         }
         //По завершении вибрации, возвращаем камеру в исходную позицию
-        transform.localPosition = startPosition;
+       transform.localPosition = startPosition;
     }
 }

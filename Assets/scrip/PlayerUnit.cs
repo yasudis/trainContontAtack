@@ -5,12 +5,21 @@ using UnityEngine;
 public class PlayerUnit : MonoBehaviour
 {
     public float healf;
+    GameObject pointEnd;
     
     void Start()
     {
        healf = PlayerManager.healf;
+       pointEnd = GameObject.FindGameObjectWithTag("PointEnd");
 
-
+    }
+    public void Update()
+    {
+        if (transform.position.z >= pointEnd.transform.position.z-10)
+        {
+            MenuManager.GameOver();
+            Debug.Log("Level comlete");
+        }
     }
 
     public void DamadgePlayer(float damadge)

@@ -16,5 +16,5 @@ public class TrainMotor : MonoBehaviour
         player.SetDestination(taget);
        
     }
-      
+          
 }
