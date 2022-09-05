@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+     public static int numberOfScence=1;
+
+
     public void ChangeMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -25,6 +27,12 @@ public class MenuManager : MonoBehaviour
     public  static void GameOver()
     {
         SceneManager.LoadScene("GameOver");
+        numberOfScence += 1;
+    }
+    public static void LevelComplete()
+    {
+        numberOfScence += 1;
+        SceneManager.LoadScene("LevelComplete");
     }
 
 

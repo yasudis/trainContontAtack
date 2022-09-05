@@ -6,7 +6,7 @@ public class EnemyFollow : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject player;
-    private float moveSpeed;
+    private float moveSpeed, moveSpeedOLd,distantOfFire;
     // public int moveAngle;
     private float damadge;
     private float healf;
@@ -23,14 +23,16 @@ public class EnemyFollow : MonoBehaviour
             case 9:
                 reload = EnemyManadger.reloadOfSolder;
                 //damadge = EnemyManadger.damadgeSolder;
-                moveSpeed = EnemyManadger.moveSolder;
+                moveSpeed= moveSpeedOLd = EnemyManadger.moveSolder;
                 healf = EnemyManadger.lifeSolder;
+                distantOfFire = EnemyManadger.distantOfFireSolder;
                 break;
             case 10:
                 reload = EnemyManadger.reloadOfFlamethrower;
                 //damadge = EnemyManadger.damadgeSolder;
-                moveSpeed = EnemyManadger.moveFlamethrower;
+                moveSpeed=moveSpeedOLd = EnemyManadger.moveFlamethrower;
                 healf = EnemyManadger.lifeFlamethrower;
+                distantOfFire = EnemyManadger.distantOfFlamethrower;
                 break;
 
 
@@ -47,6 +49,14 @@ public class EnemyFollow : MonoBehaviour
         // transform.rotation = transform.rotation = Quaternion.RotateTowards(transform.rotation, player.transform.rotation, moveAngle *Time.deltaTime);
         // transform.rotation= Quaternion.LookRotation(newDirection);
         transform.LookAt(player.transform);
+        if (Vector3.Distance(transform.position, player.transform.position) < distantOfFire)
+        {
+            moveSpeed = 0f;
+        }
+        else
+        {
+            moveSpeed = moveSpeedOLd;
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

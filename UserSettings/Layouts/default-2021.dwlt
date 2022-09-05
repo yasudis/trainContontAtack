@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Simulator
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 48
+  controlID: 17
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 447
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 356
     height: 684
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -121,14 +121,14 @@ MonoBehaviour:
     y: 684
     width: 1473
     height: 263
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 49
+  controlID: 56
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 57
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 1117
     height: 684
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 17}
@@ -378,22 +378,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jasudis\Desktop\program\trainContontAtack
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 182}
-    m_SelectedIDs: bc630000
-    m_LastClickedID: 25532
-    m_ExpandedIDs: 00000000786300007a6300007c6300007e63000080630000826300008463000086630000886300008a6300008c6300008e6300009063000092630000946300009663000000ca9a3b
+    scrollPos: {x: 0, y: 134}
+    m_SelectedIDs: 4a650000
+    m_LastClickedID: 25930
+    m_ExpandedIDs: 000000002464000026640000286400002a6400002c6400002e64000030640000326400003464000036640000386400003a6400003c640000406400004264000084b10100e2b2010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -421,7 +421,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000786300007a6300007c6300007e63000080630000826300008463000086630000886300008a6300008c6300008e63000090630000926300009463000096630000
+    m_ExpandedIDs: 000000002464000026640000286400002a6400002c6400002e64000030640000326400003464000036640000386400003a6400003c6400003e6400004064000042640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -551,23 +551,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 84f1ffff
-      m_LastClickedID: -3708
-      m_ExpandedIDs: ccdffeffd0dffeffd4dffeffe8dffeff0ce0feff10e0feff18f1ffff26f1ffff30f1ffff6cf1ffff76f1ffffb2f1ffffb6f1ffffbaf1ffffbef1ffffc2f1ffffcef1ffffd2f1ffffd6f1ffffdef1ffffe2f1ffffe6f1ffffeaf1fffff2f1fffff6f1fffffaf1ffff02f2ffff06f2ffff0af2ffff0ef2ffff12f2ffff3cf2ffff40f2ffff44f2ffff48f2ffff4cf2ffff58f2ffff5cf2ffff60f2ffff68f2ffff6cf2ffff70f2ffff74f2ffff7cf2ffff80f2ffff84f2ffff8cf2ffff90f2ffff94f2ffff98f2ffff9cf2fffff0f2fffff4f2fffff8f2fffffcf2ffff00f3ffff0cf3ffff10f3ffff14f3ffff1cf3ffff20f3ffff24f3ffff28f3ffff30f3ffff34f3ffff38f3ffff40f3ffff44f3ffff48f3ffff4cf3ffff50f3ffff6ef3ffff72f3ffff76f3ffff7af3ffff7ef3ffff8af3ffff8ef3ffff92f3ffff9af3ffff9ef3ffffa2f3ffffa6f3ffffaef3ffffb2f3ffffb6f3ffffbef3ffffc2f3ffffc6f3ffffcaf3ffffcef3fffff2f3fffff6f3fffffaf3fffffef3ffff02f4ffff0ef4ffff12f4ffff16f4ffff1ef4ffff22f4ffff26f4ffff2af4ffff32f4ffff36f4ffff3af4ffff42f4ffff46f4ffff4af4ffff4ef4ffff52f4ffff70f4ffff74f4ffff78f4ffff7cf4ffff80f4ffff8cf4ffff90f4ffff94f4ffff9cf4ffffa0f4ffffa4f4ffffa8f4ffffb0f4ffffb4f4ffffb8f4ffffc0f4ffffc4f4ffffc8f4ffffccf4ffffd0f4fffff4f4fffff8f4fffffcf4ffff00f5ffff04f5ffff10f5ffff14f5ffff18f5ffff20f5ffff24f5ffff28f5ffff2cf5ffff34f5ffff38f5ffff3cf5ffff44f5ffff48f5ffff4cf5ffff50f5ffff54f5ffff72f5ffff76f5ffff7af5ffff7ef5ffff82f5ffff8ef5ffff92f5ffff96f5ffff9ef5ffffa2f5ffffa6f5ffffaaf5ffffb2f5ffffb6f5ffffbaf5ffffc2f5ffffc6f5ffffcaf5ffffcef5ffffd2f5fffff0f5fffff4f5fffff8f5fffffcf5ffff00f6ffff0cf6ffff10f6ffff14f6ffff1cf6ffff20f6ffff24f6ffff28f6ffff30f6ffff34f6ffff38f6ffff40f6ffff44f6ffff48f6ffff4cf6ffff50f6ffff80f6ffff84f6ffff88f6ffff8cf6ffff90f6ffff9cf6ffffa0f6ffffa4f6ffffacf6ffffb0f6ffffb4f6ffffb8f6ffffc0f6ffffc4f6ffffc8f6ffffd0f6ffffd4f6ffffd8f6ffffdcf6ffffe0f6ffff1ef7ffff22f7ffff26f7ffff2af7ffff2ef7ffff3af7ffff3ef7ffff42f7ffff4af7ffff4ef7ffff52f7ffff56f7ffff5ef7ffff62f7ffff66f7ffff6ef7ffff72f7ffff76f7ffff7af7ffff7ef7ffffa2f7ffffa6f7ffffaaf7ffffaef7ffffb2f7ffffbef7ffffc2f7ffffc6f7ffffcef7ffffd2f7ffffd6f7ffffdaf7ffffe2f7ffffe6f7ffffeaf7fffff2f7fffff6f7fffffaf7fffffef7ffff02f8ffff42f8ffff46f8ffff4af8ffff4ef8ffff52f8ffff5ef8ffff62f8ffff66f8ffff6ef8ffff72f8ffff76f8ffff7af8ffff82f8ffff86f8ffff8af8ffff92f8ffff96f8ffff9af8ffff9ef8ffffa2f8ffffc6f8ffffcaf8ffffcef8ffffd2f8ffffd6f8ffffe2f8ffffe6f8ffffeaf8fffff2f8fffff6f8fffffaf8fffffef8ffff06f9ffff0af9ffff0ef9ffff16f9ffff1af9ffff1ef9ffff22f9ffff26f9ffff44f9ffff48f9ffff4cf9ffff50f9ffff54f9ffff60f9ffff64f9ffff68f9ffff70f9ffff74f9ffff78f9ffff7cf9ffff84f9ffff88f9ffff8cf9ffff94f9ffff98f9ffff9cf9ffffa0f9ffffa4f9ffffccf9ffffd2f9ffff0cfaffff10faffff14faffff18faffff1cfaffff28faffff2cfaffff30faffff38faffff3cfaffff40faffff44faffff4cfaffff50faffff54faffff5cfaffff60faffff64faffff68faffff6cfaffffc4faffffc8faffffccfaffffd0faffffd4faffffe0faffffe4faffffe8fafffff0fafffff4fafffff8fafffffcfaffff04fbffff08fbffff0cfbffff14fbffff18fbffff1cfbffff20fbffff24fbffff2efbffffac5e00000c5f00009e5f0000
+      m_SelectedIDs: e4d90100
+      m_LastClickedID: 121316
+      m_ExpandedIDs: e4bff9ff6409faff240afaffd00cfaffe80cfaff3e0dfaff2efbffff145f0000ae5f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: TT_ww1_demo_british_A (1)
-        m_OriginalName: TT_ww1_demo_british_A (1)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -2724
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -803,9 +803,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 8.01546, y: 1.3662679, z: 51.31055}
+    m_Target: {x: 13.030113, y: -3.7814846, z: 533.3794}
     speed: 2
-    m_Value: {x: 8.01546, y: 1.3662679, z: 51.31055}
+    m_Value: {x: 13.030113, y: -3.7814846, z: 533.3794}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -856,9 +856,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_Size:
-    m_Target: 1.8293289
+    m_Target: 38.594444
     speed: 2
-    m_Value: 1.8293289
+    m_Value: 38.594444
   m_Ortho:
     m_Target: 1
     speed: 2

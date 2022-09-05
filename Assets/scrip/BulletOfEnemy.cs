@@ -19,9 +19,9 @@ public class BulletOfEnemy : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += transform.forward * 10f * Time.deltaTime;
+        transform.position += transform.forward * 50f * Time.deltaTime;
         //time += time + Time.time;
-        Destroy(gameObject, 100f);
+        Destroy(gameObject, 20f);
 
     }
     private void OnTriggerEnter(Collider other)

@@ -10,7 +10,7 @@ public class BulletOfEnemyFlamethrower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        damadge = EnemyManadger.damadgeSolder;
+        damadge = EnemyManadger.damadgeOfFlamethrower;
         // time = 0;
 
 
@@ -19,7 +19,7 @@ public class BulletOfEnemyFlamethrower : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += transform.forward * 10f * Time.deltaTime;
+        transform.position += transform.forward * 12f * Time.deltaTime;
         //time += time + Time.time;
         Destroy(gameObject, 0.3f);
 
