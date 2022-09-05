@@ -107,10 +107,10 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6753515956387431701}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.81
-  m_Height: 5.97
+  m_Radius: 2
+  m_Height: 7.16
   m_Direction: 2
   m_Center: {x: -0.16, y: 0.41, z: -1.91}
 --- !u!1 &6753515956442160383
@@ -206,7 +206,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6753515956442160383}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -222,7 +222,6 @@ GameObject:
   - component: {fileID: 6753515956489430953}
   - component: {fileID: 6753515956489430954}
   - component: {fileID: 6753515956489430955}
-  - component: {fileID: 6753515956489430932}
   m_Layer: 6
   m_Name: wheel min
   m_TagString: Player
@@ -295,20 +294,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6753515956489430932
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6753515956489430933}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &6753515956541903185
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +388,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6753515956541903185}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.8
   m_Height: 5.73
   m_Direction: 1
@@ -502,7 +487,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6753515956652907602}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -600,7 +585,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6753515956864176113}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -701,7 +686,7 @@ SphereCollider:
   m_GameObject: {fileID: 6753515956979630397}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -831,7 +816,7 @@ BoxCollider:
   m_GameObject: {fileID: 6753515957339858416}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -929,7 +914,7 @@ BoxCollider:
   m_GameObject: {fileID: 6753515957743333818}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1031,7 +1016,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6753515957999451789}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -1129,7 +1114,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 6753515958090108718}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1

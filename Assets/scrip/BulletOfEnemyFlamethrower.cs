@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletOfEnemy : MonoBehaviour
+public class BulletOfEnemyFlamethrower : MonoBehaviour
 {
-    private float damadge=2f;
+    private float damadge=0.5f;
     PlayerUnit damadgePlayer;
     // private float time;
     // Start is called before the first frame update
@@ -21,13 +21,13 @@ public class BulletOfEnemy : MonoBehaviour
     {
         transform.position += transform.forward * 10f * Time.deltaTime;
         //time += time + Time.time;
-        Destroy(gameObject, 100f);
+        Destroy(gameObject, 0.3f);
 
     }
     private void OnTriggerEnter(Collider other)
     {
         GameObject whois = other.gameObject;
-
+        
 
         if (whois.tag == "Player")
         {
@@ -35,6 +35,12 @@ public class BulletOfEnemy : MonoBehaviour
             Debug.Log("Zadel Player");
             Destroy(gameObject);
             damadgePlayer.DamadgePlayer(damadge);
-        }        
+            
+
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
