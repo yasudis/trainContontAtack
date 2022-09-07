@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-     public static int numberOfScence=1;
+     private static int numberOfScence=1;
 
 
     public void ChangeMenu()
     {
         SceneManager.LoadScene("Menu");
     }
-    public void ChangeRestart(int numberOfScence)
+    public void ChangeRestart()
     {
         
         SceneManager.LoadScene("scene_"+numberOfScence);
@@ -33,6 +33,11 @@ public class MenuManager : MonoBehaviour
     {
         numberOfScence += 1;
         SceneManager.LoadScene("LevelComplete");
+    }
+    public static void Change—ontinue()
+    {
+        
+        SceneManager.LoadScene("scene_" + numberOfScence);
     }
 
 
