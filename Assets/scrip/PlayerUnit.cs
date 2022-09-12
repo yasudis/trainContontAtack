@@ -17,7 +17,7 @@ public class PlayerUnit : MonoBehaviour
     {
         if (transform.position.z >= pointEnd.transform.position.z-10)
         {
-            MenuManager.GameOver();
+            MenuManager.LevelComplete();
             Debug.Log("Level comlete");
         }
     }

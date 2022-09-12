@@ -27,18 +27,29 @@ public class MenuManager : MonoBehaviour
     public  static void GameOver()
     {
         SceneManager.LoadScene("GameOver");
-        numberOfScence += 1;
+       // numberOfScence += 1;
     }
     public static void LevelComplete()
     {
         numberOfScence += 1;
-        SceneManager.LoadScene("LevelComplete");
+        SceneManager.LoadScene("levelComplete");
     }
     public static void Change—ontinue()
     {
         
         SceneManager.LoadScene("scene_" + numberOfScence);
     }
+    public static void ChangeNewGame()
+    {
+        numberOfScence = 1;
+        SceneManager.LoadScene("scene_" + numberOfScence);
 
+    }
+    public static void ChangeNextLevel()
+    {
+        
+        SceneManager.LoadScene("scene_" + numberOfScence);
+
+    }
 
 }
