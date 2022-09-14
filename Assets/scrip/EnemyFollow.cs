@@ -34,6 +34,21 @@ public class EnemyFollow : MonoBehaviour
                 healf = EnemyManadger.lifeFlamethrower;
                 distantOfFire = EnemyManadger.distantOfFlamethrower;
                 break;
+            case 11:
+                reload = EnemyManadger.reloadOfTurel;
+                //damadge = EnemyManadger.damadgeSolder;
+                moveSpeed = moveSpeedOLd = EnemyManadger.moveTurel;
+                healf = EnemyManadger.lifeTurel;
+                distantOfFire = EnemyManadger.distantOfFireTurel;
+                break;
+            case 12:
+                reload = EnemyManadger.reloadOfTank;
+                //damadge = EnemyManadger.damadgeSolder;
+                moveSpeed = moveSpeedOLd = EnemyManadger.moveTank;
+                healf = EnemyManadger.lifeTank;
+                distantOfFire = EnemyManadger.distantOfFireTank;
+                break;
+
 
 
         }

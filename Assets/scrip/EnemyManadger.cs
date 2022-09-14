@@ -16,5 +16,19 @@ public class EnemyManadger : MonoBehaviour
     public static float lifeFlamethrower = 40f;
     public static float distantOfFlamethrower = 7f;
 
+    public static float lifeTurel = 50f;
+    public static float moveTurel = 0f;
+    public static float damadgeTurel = 50f;
+    public static int turelOfCoins = 100;
+    public static float distantOfFireTurel = 100f;
+    public static float reloadOfTurel = 20f;
+
+    public static float lifeTank = 50f;
+    public static float moveTank = 10f;
+    public static float damadgeTank = 50f;
+    public static int tankOfCoins = 100;
+    public static float distantOfFireTank = 30f;
+    public static float reloadOfTank = 20f;
+
 
 }
