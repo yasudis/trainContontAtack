@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class EnemyFollow : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,8 +17,12 @@ public class EnemyFollow : MonoBehaviour
     public GameObject BuletOfEnemy;
     private float reload;
     PlayerUnit damadgePlayer;
+    private int dinamicOfAnglyFireX;
+    private int dinamicOfAnglyFireZ;
+    
     void Start()
     {
+        
         Enemy = this.gameObject;
         switch (Enemy.layer)
         {
@@ -63,7 +69,8 @@ public class EnemyFollow : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
         // transform.rotation = transform.rotation = Quaternion.RotateTowards(transform.rotation, player.transform.rotation, moveAngle *Time.deltaTime);
         // transform.rotation= Quaternion.LookRotation(newDirection);
-        transform.LookAt(player.transform);
+        Vector3 tagetPosition=new Vector3(player.transform.position.x+ dinamicOfAnglyFireX, player.transform.position.y,player.transform.position.z+ dinamicOfAnglyFireZ);
+        transform.LookAt(tagetPosition);
         if (Vector3.Distance(transform.position, player.transform.position) < distantOfFire)
         {
             moveSpeed = 0f;
@@ -95,9 +102,11 @@ public class EnemyFollow : MonoBehaviour
         }
         void FireEnemy()
         {
-
-            Instantiate(BuletOfEnemy, point.transform.position, transform.rotation);
+        dinamicOfAnglyFireX = Random.Range(-10, 10);
+        dinamicOfAnglyFireZ = Random.Range(-10, 10);
+        Instantiate(BuletOfEnemy, point.transform.position, transform.rotation) ;
             BuletOfEnemy.transform.position += transform.forward * 5f * Time.deltaTime;
+            BuletOfEnemy.transform.Rotate(0f, 90f,0f);
             Invoke("FireEnemy", reload);
         }
     } 

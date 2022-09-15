@@ -20,7 +20,7 @@ public class BuletOfTurel : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += transform.forward * 25f * Time.deltaTime;
+        transform.position += transform.forward * 100f * Time.deltaTime;
         //time += time + Time.time;
         Destroy(gameObject, 5f);
 

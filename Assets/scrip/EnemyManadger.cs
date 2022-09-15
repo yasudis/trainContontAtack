@@ -18,10 +18,10 @@ public class EnemyManadger : MonoBehaviour
 
     public static float lifeTurel = 50f;
     public static float moveTurel = 0f;
-    public static float damadgeTurel = 50f;
+    public static float damadgeTurel = 25f;
     public static int turelOfCoins = 100;
-    public static float distantOfFireTurel = 100f;
-    public static float reloadOfTurel = 20f;
+    public static float distantOfFireTurel = 60f;
+    public static float reloadOfTurel = 10f;
 
     public static float lifeTank = 50f;
     public static float moveTank = 10f;
