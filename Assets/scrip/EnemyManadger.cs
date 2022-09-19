@@ -24,11 +24,11 @@ public class EnemyManadger : MonoBehaviour
     public static float reloadOfTurel = 10f;
 
     public static float lifeTank = 50f;
-    public static float moveTank = 10f;
+    public static float moveTank = 0f;
     public static float damadgeTank = 50f;
     public static int tankOfCoins = 100;
     public static float distantOfFireTank = 30f;
-    public static float reloadOfTank = 20f;
+    public static float reloadOfTank = 5f;
 
 
 }
