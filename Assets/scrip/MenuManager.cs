@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-     private static int numberOfScence=1;
+    public GameObject panel;
+    //public GameObject panelRespawn;
+    static public bool isPaused=false;
+    private static int numberOfScence=1;
 
 
     public void ChangeMenu()
@@ -51,5 +54,47 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("scene_" + numberOfScence);
 
     }
+    public void OnGUI()
+    {
+        if (isPaused == true)
+        {
+            Time.timeScale = 0;
+            panel.SetActive(true);
+            //panelRespawn.GetComponent<BoxCollider>().enabled = false;
+            //mainmusic.Pause();
 
+
+        }
+        if (panel.active==true)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+
+        //else
+       // {
+       //     Time.timeScale = 1;
+       //     panel.SetActive(false);
+            //panelRespawn.GetComponent<BoxCollider>().enabled = true;
+            //mainmusic.Play();
+            //if (!mainmusic.isPlaying)
+            //{ mainmusic.Play(); }
+
+      //  }
+
+    }
+
+    public void OnApplicationFocus(bool hasFocus)
+    {
+        isPaused = !hasFocus;
+    }
+
+    public void OnApplicationPause(bool pauseStatus)
+    {
+        isPaused = pauseStatus;
+    }
+   
 }
