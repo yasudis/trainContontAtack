@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
     public static float healf=300;
     public static float speedOfAngle=2f;
     public static int menyTorel;
-    public static float damedgePlaer;
+    public static float damedgePlaer=10;
     public static float damedgeTurel;
     public static int score = 0;
     public TextMeshProUGUI textOfScore;
@@ -19,8 +19,8 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
        
-        damedgePlaer = 5f;
-        speedOfAngle = 2f;
+        //damedgePlaer = 5f;
+       // speedOfAngle = 2f;
 
     }
     public void Update()

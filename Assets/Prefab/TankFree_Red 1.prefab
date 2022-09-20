@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 3463857935435935094}
   - component: {fileID: 5139572866538866116}
   - component: {fileID: 459859850041499170}
+  - component: {fileID: 4810115432401542724}
   m_Layer: 12
   m_Name: TankFree_Tower
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,6 +185,20 @@ MonoBehaviour:
   point: {fileID: 4869011630917170589}
   BuletOfEnemy: {fileID: 8362787410197010642, guid: a5c3b1130b9498546b700b58ddbee187,
     type: 3}
+--- !u!136 &4810115432401542724
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2457601262040078919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.35
+  m_Height: 3.3
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.49, z: 0.2}
 --- !u!1 &2902709897703358072
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +295,6 @@ GameObject:
   - component: {fileID: 9170957963805065750}
   - component: {fileID: 6530804518502666957}
   - component: {fileID: 520945464259048606}
-  - component: {fileID: -84690603697089908}
   m_Layer: 12
   m_Name: TankFree_Red 1
   m_TagString: Enemy
@@ -296,7 +310,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3503318476722469206}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.6148427, y: 0, z: 0.45704442}
+  m_LocalPosition: {x: 0.031671505, y: 0, z: -0.0000000037755368}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -370,20 +384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a4e214ec46e404885d646bb3ad2133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &-84690603697089908
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3503318476722469206}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.36
-  m_Height: 3.81
-  m_Direction: 2
-  m_Center: {x: 0.00000038743028, y: 0.06295732, z: -0.03892929}
 --- !u!1 &3745786531496338126
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,10 @@ public class MenuManager : MonoBehaviour
     //public GameObject panelRespawn;
     static public bool isPaused=false;
     private static int numberOfScence=1;
+    private void Start()
+    {
+        isPaused = false;
+    }
 
 
     public void ChangeMenu()
@@ -35,6 +39,10 @@ public class MenuManager : MonoBehaviour
     public static void LevelComplete()
     {
         numberOfScence += 1;
+        if (numberOfScence > 3)
+        {
+            numberOfScence = 1;
+        }
         SceneManager.LoadScene("levelComplete");
     }
     public static void Change—ontinue()
