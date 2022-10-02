@@ -12,6 +12,8 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         isPaused = false;
+        //  panel.SetActive(false);
+      // panel= GameObject.FindGameObjectWithTag("Panel");
     }
 
 
@@ -62,6 +64,8 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("scene_" + numberOfScence);
 
     }
+
+    
     public void OnGUI()
     {
         if (isPaused == true)

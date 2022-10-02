@@ -36,9 +36,6 @@ public class Bulet : MonoBehaviour
            enemyFollow.DamadgeEnemy(damadge);
            // Destroy(whois);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        
     }
 }

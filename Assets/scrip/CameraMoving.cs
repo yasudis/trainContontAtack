@@ -18,10 +18,10 @@ public class CameraMoving : MonoBehaviour
     {
         cameraPositionOfPlayer = new Vector3(player.transform.position.x, player.transform.position.y + 24, player.transform.position.z - 20);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            ShakeCamera(0.5f, 1f, 20f);
-        }
+       // if (Input.GetMouseButtonDown(0))
+        //{
+       //     ShakeCamera(0.5f, 1f, 20f);
+       // }
         transform.position = Vector3.MoveTowards(transform.position, cameraPositionOfPlayer, moveSpeed * Time.deltaTime);
         transform.rotation = startRotation;
 

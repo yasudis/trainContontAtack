@@ -6,6 +6,9 @@ public class PlayerUnit : MonoBehaviour
 {
     public float healf;
     GameObject pointEnd;
+     public CameraMoving cameraMoving;
+    public float howManyDamadge;
+    
     
     void Start()
     {
@@ -25,6 +28,14 @@ public class PlayerUnit : MonoBehaviour
     public void DamadgePlayer(float damadge)
     {
         healf -= damadge;
+        howManyDamadge += damadge;
+        if (howManyDamadge >= 10)
+        {
+            cameraMoving.ShakeCamera(0.5f, 1f, 20f);
+            howManyDamadge = 0;
+        }
+        
+        
         if (healf < 0)
         {
             MenuManager.GameOver();
@@ -34,4 +45,5 @@ public class PlayerUnit : MonoBehaviour
 
         }
     }
+
 }
