@@ -17,7 +17,7 @@ public class GoogleABS : MonoBehaviour
      private void RequestBanner()
     {
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-3940256099942544/6300978111";
+        string adUnitId = "ca-app-pub-8111612965539927~8289644552";
 #elif UNITY_IPHONE
             string adUnitId = "ca-app-pub-3940256099942544/2934735716";
 #else
