@@ -12,7 +12,7 @@ private InterstitialAd interstitial;
     private void RequestInterstitial()
 {
 #if UNITY_ANDROID
-    string adUnitId = "ca-app-pub-8111612965539927~8289644552";
+    string adUnitId = "ca-app-pub-8111612965539927/4918939820";
 #elif UNITY_IPHONE
         string adUnitId = "ca-app-pub-3940256099942544/4411468910";
 #else
