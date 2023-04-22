@@ -8,15 +8,10 @@ public class SpawnEnemy : MonoBehaviour
     public int reload;
     public GameObject point;
     public int whereGoEnemy;
-
     void Start()
-    {
-        
+    {       
         Invoke("SpawnForEnemy", reload);
-
-    }
-
-    
+    }  
     void SpawnForEnemy()
     {
         Instantiate(Enemy, point.transform.position, transform.rotation);

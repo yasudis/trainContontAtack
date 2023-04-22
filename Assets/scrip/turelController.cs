@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class turelController : MonoBehaviour
 {
     public VariableJoystick _fixedJoystick;
-    private float speedOfAngleTurel;
+    private float turelSpeedAngle;
     public Rigidbody rb;
     private float angle;
     public GameObject turel;
@@ -15,32 +15,30 @@ public class turelController : MonoBehaviour
     private float reload;
     private void Start()
     {
-        speedOfAngleTurel = PlayerManager.speedOfAngle;
-        rb= GetComponent<Rigidbody>();
+        turelSpeedAngle = PlayerManager.speedAngle;
+        rb = GetComponent<Rigidbody>();
         reload = .5f;
         Invoke("FireTurel", 1f);
     }
     public void FixedUpdate()
     {
-        angle= angle + _fixedJoystick.Horizontal*speedOfAngleTurel;
-        
+        angle = angle + _fixedJoystick.Horizontal * turelSpeedAngle;
+
         if (_fixedJoystick.Horizontal != 0)
         {
-            turel.transform.rotation = Quaternion.Euler(rb.rotation.x,angle, rb.rotation.z);
-            
-
+            turel.transform.rotation = Quaternion.Euler(rb.rotation.x, angle, rb.rotation.z);
         }
         if (Mathf.Abs(angle) > 360)
         {
             angle = 0;
         }
-       // Vector3 input = new Vector3(_fixedJoystick.Horizontal, _fixedJoystick.Vertical);
-       // Vector3 velocity = input.normalized * speed;
-       //transform.position += velocity * Time.deltaTime;
+        // Vector3 input = new Vector3(_fixedJoystick.Horizontal, _fixedJoystick.Vertical);
+        // Vector3 velocity = input.normalized * speed;
+        //transform.position += velocity * Time.deltaTime;
     }
     void FireTurel()
     {
-        Instantiate(bulet,point.transform.position,turel.transform.rotation);
+        Instantiate(bulet, point.transform.position, turel.transform.rotation);
         bulet.transform.position += transform.forward * 5f * Time.deltaTime;
         Invoke("FireTurel", reload);
     }

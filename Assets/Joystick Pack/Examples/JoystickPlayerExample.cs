@@ -10,7 +10,7 @@ public class JoystickPlayerExample : MonoBehaviour
 
     public void Start()
     {
-        speedOfAnglyTurel = PlayerManager.speedOfAngle;
+        speedOfAnglyTurel = PlayerManager.speedAngle;
     }
     public void FixedUpdate()
     {

@@ -5,22 +5,19 @@ using GoogleMobileAds.Api;
 
 public class GoogleABSSite : MonoBehaviour
 {
-    
-private InterstitialAd interstitial;
-    
-
+    private InterstitialAd interstitial;
     private void RequestInterstitial()
-{
+    {
 #if UNITY_ANDROID
-    string adUnitId = "ca-app-pub-8111612965539927/4918939820";
+        string adUnitId = "ca-app-pub-8111612965539927/4918939820";
 #elif UNITY_IPHONE
         string adUnitId = "ca-app-pub-3940256099942544/4411468910";
 #else
         string adUnitId = "unexpected_platform";
 #endif
 
-    // Initialize an InterstitialAd.
-    this.interstitial = new InterstitialAd(adUnitId);
+        // Initialize an InterstitialAd.
+        this.interstitial = new InterstitialAd(adUnitId);
         AdRequest request = new AdRequest.Builder().Build();
         // Load the interstitial with the request.
         this.interstitial.LoadAd(request);

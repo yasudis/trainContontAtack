@@ -4,39 +4,29 @@ using UnityEngine;
 
 public class BulletOfEnemyFlamethrower : MonoBehaviour
 {
-    private float damadge=0.5f;
-    PlayerUnit damadgePlayer;
-    // private float time;
-    // Start is called before the first frame update
+    private float damadge = 0.5f;
+    PlayerUnit playerDamadge;
     void Start()
     {
-        damadge = EnemyManadger.damadgeOfFlamethrower;
+        damadge = EnemyManadger.damadgeFlamethrower;
         // time = 0;
-
-
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         transform.position += transform.forward * 12f * Time.deltaTime;
         //time += time + Time.time;
         Destroy(gameObject, 0.3f);
-
     }
     private void OnTriggerEnter(Collider other)
     {
         GameObject whois = other.gameObject;
-        
 
         if (whois.tag == "Player")
         {
-            damadgePlayer = whois.GetComponent<PlayerUnit>();
+            playerDamadge = whois.GetComponent<PlayerUnit>();
             Debug.Log("Zadel Player");
             Destroy(gameObject);
-            damadgePlayer.DamadgePlayer(damadge);
-            
-
+            playerDamadge.DamadgePlayer(damadge);
         }
         else
         {

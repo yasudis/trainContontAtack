@@ -7,65 +7,54 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject panel;
     //public GameObject panelRespawn;
-    static public bool isPaused=false;
-    private static int numberOfScence=1;
+    static public bool isPaused = false;
+    private static int numberScence = 1;
     private void Start()
     {
         isPaused = false;
         //  panel.SetActive(false);
-      // panel= GameObject.FindGameObjectWithTag("Panel");
+        // panel= GameObject.FindGameObjectWithTag("Panel");
     }
-
-
     public void ChangeMenu()
     {
         SceneManager.LoadScene("Menu");
     }
     public void ChangeRestart()
     {
-        
-        SceneManager.LoadScene("scene_"+numberOfScence);
-
+        SceneManager.LoadScene("scene_" + numberScence);
     }
-
     public void ChangeExit()
-    { 
+    {
         Application.Quit();
         Debug.Log("Exit");
     }
-    public  static void GameOver()
+    public static void GameOver()
     {
         SceneManager.LoadScene("GameOver");
-       // numberOfScence += 1;
+        // numberOfScence += 1;
     }
     public static void LevelComplete()
     {
-        numberOfScence += 1;
-        if (numberOfScence > 3)
+        numberScence += 1;
+        if (numberScence > 3)
         {
-            numberOfScence = 1;
+            numberScence = 1;
         }
         SceneManager.LoadScene("levelComplete");
     }
     public static void Change—ontinue()
     {
-        
-        SceneManager.LoadScene("scene_" + numberOfScence);
+        SceneManager.LoadScene("scene_" + numberScence);
     }
     public static void ChangeNewGame()
     {
-        numberOfScence = 1;
-        SceneManager.LoadScene("scene_" + numberOfScence);
-
+        numberScence = 1;
+        SceneManager.LoadScene("scene_" + numberScence);
     }
     public static void ChangeNextLevel()
     {
-        
-        SceneManager.LoadScene("scene_" + numberOfScence);
-
+        SceneManager.LoadScene("scene_" + numberScence);
     }
-
-    
     public void OnGUI()
     {
         if (isPaused == true)
@@ -74,10 +63,8 @@ public class MenuManager : MonoBehaviour
             panel.SetActive(true);
             //panelRespawn.GetComponent<BoxCollider>().enabled = false;
             //mainmusic.Pause();
-
-
         }
-        if (panel.active==true)
+        if (panel.active == true)
         {
             Time.timeScale = 0;
         }
@@ -85,28 +72,23 @@ public class MenuManager : MonoBehaviour
         {
             Time.timeScale = 1;
         }
-
         //else
-       // {
-       //     Time.timeScale = 1;
-       //     panel.SetActive(false);
-            //panelRespawn.GetComponent<BoxCollider>().enabled = true;
-            //mainmusic.Play();
-            //if (!mainmusic.isPlaying)
-            //{ mainmusic.Play(); }
+        // {
+        //     Time.timeScale = 1;
+        //     panel.SetActive(false);
+        //panelRespawn.GetComponent<BoxCollider>().enabled = true;
+        //mainmusic.Play();
+        //if (!mainmusic.isPlaying)
+        //{ mainmusic.Play(); }
 
-      //  }
-
+        //  }
     }
-
     public void OnApplicationFocus(bool hasFocus)
     {
         isPaused = !hasFocus;
     }
-
     public void OnApplicationPause(bool pauseStatus)
     {
         isPaused = pauseStatus;
     }
-   
 }

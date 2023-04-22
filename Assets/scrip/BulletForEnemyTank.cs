@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BulletForEnemyTank : MonoBehaviour
@@ -13,22 +11,16 @@ public class BulletForEnemyTank : MonoBehaviour
     {
         damadge = EnemyManadger.damadgeTank;
         // time = 0;
-
-
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         transform.position += transform.forward * 100f * Time.deltaTime;
         //time += time + Time.time;
         Destroy(gameObject, 5f);
-
     }
     private void OnTriggerEnter(Collider other)
     {
         GameObject whois = other.gameObject;
-
 
         if (whois.tag == "Player")
         {
@@ -36,8 +28,6 @@ public class BulletForEnemyTank : MonoBehaviour
             Debug.Log("Zadel Player");
             Destroy(gameObject);
             damadgePlayer.DamadgePlayer(damadge);
-
-
         }
         else
         {

@@ -1,15 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 
 public class EnemyFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
     GameObject player;
-    private float moveSpeed, moveSpeedOLd,distantOfFire;
-    // public int moveAngle;
+    private float moveSpeed, moveSpeedOLd, distantOfFire;
     private float damadge;
     private float healf;
     public GameObject point;
@@ -19,57 +15,50 @@ public class EnemyFollow : MonoBehaviour
     PlayerUnit damadgePlayer;
     private int dinamicOfAnglyFireX;
     private int dinamicOfAnglyFireZ;
-    
+
     void Start()
     {
-        
         Enemy = this.gameObject;
         switch (Enemy.layer)
         {
             case 9:
-                reload = EnemyManadger.reloadOfSolder;
+                reload = EnemyManadger.reloadSolder;
                 //damadge = EnemyManadger.damadgeSolder;
-                moveSpeed= moveSpeedOLd = EnemyManadger.moveSolder;
+                moveSpeed = moveSpeedOLd = EnemyManadger.moveSolder;
                 healf = EnemyManadger.lifeSolder;
-                distantOfFire = EnemyManadger.distantOfFireSolder;
+                distantOfFire = EnemyManadger.distantFireSolder;
                 break;
             case 10:
-                reload = EnemyManadger.reloadOfFlamethrower;
+                reload = EnemyManadger.reloadFlamethrower;
                 //damadge = EnemyManadger.damadgeSolder;
-                moveSpeed=moveSpeedOLd = EnemyManadger.moveFlamethrower;
+                moveSpeed = moveSpeedOLd = EnemyManadger.moveFlamethrower;
                 healf = EnemyManadger.lifeFlamethrower;
-                distantOfFire = EnemyManadger.distantOfFlamethrower;
+                distantOfFire = EnemyManadger.distantFlamethrower;
                 break;
             case 11:
-                reload = EnemyManadger.reloadOfTurel;
+                reload = EnemyManadger.reloadTurel;
                 //damadge = EnemyManadger.damadgeSolder;
                 moveSpeed = moveSpeedOLd = EnemyManadger.moveTurel;
                 healf = EnemyManadger.lifeTurel;
-                distantOfFire = EnemyManadger.distantOfFireTurel;
+                distantOfFire = EnemyManadger.distantFireTurel;
                 break;
             case 12:
-                reload = EnemyManadger.reloadOfTank;
+                reload = EnemyManadger.reloadTank;
                 //damadge = EnemyManadger.damadgeSolder;
                 moveSpeed = moveSpeedOLd = EnemyManadger.moveTank;
                 healf = EnemyManadger.lifeTank;
-                distantOfFire = EnemyManadger.distantOfFireTank;
+                distantOfFire = EnemyManadger.distantFireTank;
                 break;
-
-
-
         }
-
         player = GameObject.FindGameObjectWithTag("Player");
         Invoke("FireEnemy", reload);
     }
-
-    // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
         // transform.rotation = transform.rotation = Quaternion.RotateTowards(transform.rotation, player.transform.rotation, moveAngle *Time.deltaTime);
         // transform.rotation= Quaternion.LookRotation(newDirection);
-        Vector3 tagetPosition=new Vector3(player.transform.position.x+ dinamicOfAnglyFireX, player.transform.position.y,player.transform.position.z+ dinamicOfAnglyFireZ);
+        Vector3 tagetPosition = new Vector3(player.transform.position.x + dinamicOfAnglyFireX, player.transform.position.y, player.transform.position.z + dinamicOfAnglyFireZ);
         transform.LookAt(tagetPosition);
         if (Vector3.Distance(transform.position, player.transform.position) < distantOfFire)
         {
@@ -91,22 +80,22 @@ public class EnemyFollow : MonoBehaviour
             Destroy(gameObject);
         }
     }
-        public void DamadgeEnemy(float damadge)
+    public void DamadgeEnemy(float damadge)
+    {
+        healf -= damadge;
+        if (healf < 0)
         {
-            healf -= damadge;
-            if (healf < 0)
-            {
-                Destroy(gameObject);
-                PlayerManager.score += EnemyManadger.solderOfCoins;
-            }
+            Destroy(gameObject);
+            PlayerManager.score += EnemyManadger.soldeCoins;
         }
-        void FireEnemy()
-        {
+    }
+    void FireEnemy()
+    {
         dinamicOfAnglyFireX = Random.Range(-10, 10);
         dinamicOfAnglyFireZ = Random.Range(-10, 10);
-        Instantiate(BuletOfEnemy, point.transform.position, transform.rotation) ;
-            BuletOfEnemy.transform.position += transform.forward * 5f * Time.deltaTime;
-            BuletOfEnemy.transform.Rotate(0f, 90f,0f);
-            Invoke("FireEnemy", reload);
-        }
-    } 
+        Instantiate(BuletOfEnemy, point.transform.position, transform.rotation);
+        BuletOfEnemy.transform.position += transform.forward * 5f * Time.deltaTime;
+        BuletOfEnemy.transform.Rotate(0f, 90f, 0f);
+        Invoke("FireEnemy", reload);
+    }
+}

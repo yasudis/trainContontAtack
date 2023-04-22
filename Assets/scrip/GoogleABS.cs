@@ -6,15 +6,12 @@ using GoogleMobileAds.Api;
 public class GoogleABS : MonoBehaviour
 {
     private BannerView bannerView;
-    // Start is called before the first frame update
     void Start()
     {
         MobileAds.Initialize(initStatus => { });
         this.RequestBanner();
     }
-
-    // Update is called once per frame
-     private void RequestBanner()
+    private void RequestBanner()
     {
 #if UNITY_ANDROID
         string adUnitId = "ca-app-pub-8111612965539927/1151633940";
